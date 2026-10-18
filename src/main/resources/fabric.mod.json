@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "litematica-patch",
+	"version": "${version}",
+	"name": "litematica-patch",
+	"description": "Use Mixin to override the ‘IrisCompat’ feature of Iris inside litematica, and disable it.",
+	"authors": [
+		"safesaffawa"
+	],
+	"contact": {
+		"homepage": "https://github.com/safesaffawa",
+		"sources": "https://github.com/safesaffawa/litematica-patch"
+	},
+	"license": "LGPL-3.0-only",
+	"icon": "assets/litematica-patch/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"off.safe.LitematicaPatch"
+		],
+		"client": [
+			"off.safe.client.LitematicaPatchClient"
+		]
+	},
+	"mixins": [
+		"litematica-patch.mixins.json",
+		{
+			"config": "litematica-patch.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"litematica": ">=0.29.0"
+	},
+	"recommends": {
+		"iris": "*"
+	}
+}

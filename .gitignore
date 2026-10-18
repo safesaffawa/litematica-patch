@@ -1,16 +1,51 @@
-# Compiled class file
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
+*.launch
+
+# idea
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+
+*.DS_Store
+
+# fabric
+
+run/
+.fabric/
+
+# local compile-only dependencies
+
+libs/
+
+# java
+
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
 *.ctxt
-
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# package files
+
 *.jar
 *.war
 *.nar
@@ -19,6 +54,13 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# but keep the gradle wrapper jar - builds and CI depend on it
+
+!gradle/wrapper/gradle-wrapper.jar
+
+# jvm crash logs
+
 hs_err_pid*
 replay_pid*
+*.hprof
+*.jfr
